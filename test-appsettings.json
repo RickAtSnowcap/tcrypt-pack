@@ -1,0 +1,10 @@
+{
+  "Suitcase": {
+    "DbConnection": "wRnE61ysszHgvjM7Wa3EnesU3jLSNSQxzBLuANzln5TPMCCZo5/yG1v5gRxCxP5oNe6JXn65KYSNZ9PMCJYfvi41+4sSjad4rNGoI18O8VI=",
+    "JwtSecret": "PLACEHOLDER"
+  },
+  "Jwt": {
+    "Issuer": "TestApp",
+    "ExpirationHours": 24
+  }
+}
