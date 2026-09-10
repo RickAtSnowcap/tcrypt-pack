@@ -75,14 +75,9 @@ public class Program
             return 1;
         }
 
-        if (!File.Exists(credPath))
-        {
-            Console.Error.WriteLine($"Error: Sealed credential not found: {credPath}");
-            Console.Error.WriteLine("Has the Suitcase key been sealed with systemd-creds?");
-            return 1;
-        }
-
         // Step 1: Get the decrypted Suitcase key from the TPM via systemd-creds
+        // Note: We don't pre-check File.Exists because the credential directory
+        // is typically root-only (0700). The sudo systemd-creds call handles access.
         byte[]? aesKey = DecryptCredential(credPath, credName);
         if (aesKey is null)
             return 1;
