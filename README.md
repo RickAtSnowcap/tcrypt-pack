@@ -1,5 +1,10 @@
 # tcrypt-pack
 
+> **RETIRED 2026-10-27.** Don't use this tool. Taking the plaintext as `--value` put secrets into
+> argv, sudo logs and the journal. It was replaced by Envoy's `sudo envoy suitcase set <app> <field>`,
+> which reads the value at a hidden prompt. The binary was removed from `/usr/local/bin`; this repo is
+> kept for history only.
+
 CLI tool that encrypts plaintext values and stores them in the Suitcase section of a JSON config file. .NET 10 native AOT binary.
 
 ## What it does
